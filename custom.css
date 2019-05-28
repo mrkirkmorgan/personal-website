@@ -3,5 +3,5 @@
 /* Styles related to the background image */
 body {
     background: rgba(0, 0, 0, .5) url("cloudymountaintops.jpg") no-repeat fixed center;
-    background-size: 100% auto;
+    background-size: cover;
 }
