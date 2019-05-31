@@ -1,7 +1,37 @@
 /* A custom css file for my personal website */
 
 /* Styles related to the background image */
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     background: rgba(0, 0, 0, .5) url("cloudymountaintops.jpg") no-repeat fixed center;
     background-size: cover;
+}
+
+/* CSS for the masthead (landing area) */
+header.masthead {
+    height: 100vh;
+}
+
+/* The main header in the masthead */
+header.masthead h1 {
+    -webkit-text-stroke: 2px gray;
+    font-family: 'Rubik', sans-serif;
+    color: rgba(0, 184, 148,.6);
+    font-size: 6em;
+}
+
+/* The subheader in the masthead */
+header.masthead p {
+    font-family: 'Rubik', sans-serif;
+    color: rgba(0, 184, 148,1.0);
+    font-size: 1.25em;
+}
+
+/* General CSS */
+.full-height {
+    height: 100% !important;
 }
