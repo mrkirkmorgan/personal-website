@@ -18,9 +18,8 @@ header.masthead {
 
 /* The main header in the masthead */
 header.masthead h1 {
-    -webkit-text-stroke: 2px gray;
     font-family: 'Rubik', sans-serif;
-    color: rgba(0, 184, 148,.6);
+    color: rgba(0, 184, 148,.75);
     font-size: 6em;
 }
 
@@ -28,7 +27,7 @@ header.masthead h1 {
 header.masthead p {
     font-family: 'Rubik', sans-serif;
     color: rgba(0, 184, 148,1.0);
-    font-size: 1.25em;
+    font-size: 1.40em;
 }
 
 /* General CSS */
