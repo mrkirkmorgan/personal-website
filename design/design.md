@@ -1,6 +1,6 @@
 # My Personal Website
 
-### Game Plan:
+### Game Plan
 
 This is a project that I've been developing on and off over the last few years and I feel as though 
 its time to finally put the whole thing together. I'm going to keep the design rather simple and 
@@ -11,7 +11,7 @@ I'm going to use the previous codebase as a starting point since the DNS and CNA
 as well as the certificate for the https:// connection. Not to mention the code is not that far along 
 and it already consists of some of the basic components for the site.  
 
-### Purpose:
+### Purpose
 
 This website is simply meant to showcase my projects to the world. It's a window into what I work on 
 and a way to market what I do to people who are curious. These projects primarily pretain to 
@@ -40,4 +40,4 @@ super high quality for a website.
 I'm going to build this website as plainly and simply as I can. No confusing/fancy frameworks or crazy 
 libraries. I'll stick to regular ol' HTML, CSS, and JavaScript. The only library I'll likely use is 
 JQuery. I'll use a CDN for JQuery. The website will be hosted using GitHub pages and the DNS is managed
-by NameCheap. The website uses a custom domain and it can be found at https://www.mrkirkmorga.com. 
+by NameCheap. The website uses a custom domain and it can be found at https://www.mrkirkmorgan.com. 
