@@ -11,25 +11,6 @@ body {
     background-size: cover;
 }
 
-/* CSS for the masthead (landing area) */
-header.masthead {
-    height: 100vh;
-}
-
-/* The main header in the masthead */
-header.masthead h1 {
-    font-family: 'Rubik', sans-serif;
-    color: rgba(0, 184, 148,.75);
-    font-size: 6em;
-}
-
-/* The subheader in the masthead */
-header.masthead p {
-    font-family: 'Rubik', sans-serif;
-    color: rgba(0, 184, 148,1.0);
-    font-size: 1.40em;
-}
-
 /* General CSS */
 .full-height {
     height: 100% !important;
