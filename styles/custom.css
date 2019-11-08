@@ -1,17 +1,77 @@
 /* A custom css file for my personal website */
 
-/* Styles related to the background image */
-html, body {
-    width: 100%;
-    height: 100%;
+/* CSS Reset */
+* {
+	vertical-align: baseline;
+	font-weight: inherit;
+	font-family: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
 }
 
+
+/*----- General Styles -----*/
 body {
-    background: rgba(0, 0, 0, .5) url("cloudymountaintops.jpg") no-repeat fixed center;
+    /*
+    background: rgba(0, 0, 0, .5) url("../images/backgrounds/cloudymountaintopsfade.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
+    */
+    background-color: #EAE7DC;
 }
 
-/* General CSS */
-.full-height {
-    height: 100% !important;
+header { font-weight: bold; }
+
+
+/*----- Utility Styles -----*/
+.no-margins { margin: 0; }
+
+.center-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
+
+
+/*----- Sitewide Styles -----*/
+.page-section { 
+    height: 100vh; 
+    width: 100%; 
+}
+
+
+/*----- Section Styles -----*/
+    
+/* Landing Area */
+
+.heading-area {
+    max-width: 70%;
+    font-family: 'Righteous', cursive;
+    color: #E98074;
+} 
+
+.heading-area .pre-header { 
+    font-size: 2.5rem; 
+    font-family: inherit;
+} 
+
+.heading-area header {
+    font-size: 6rem;
+    color: #E85A4F;
+    letter-spacing: .3rem;
+    padding-left: 2rem;
+    margin-bottom: 3rem;
+}
+
+.heading-area p { 
+    font-size: 1.4rem; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+} 
