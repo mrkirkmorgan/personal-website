@@ -24,6 +24,7 @@ body {
     background-size: cover;
     */
     background-color: #EAE7DC;
+    padding: 0 6rem;
 }
 
 header { font-weight: bold; }
@@ -55,6 +56,16 @@ header { font-weight: bold; }
     -ms-user-select: none; 
 }
 
+.no-bullets {
+    list-style-type: none;
+}
+
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
 
 /*----- Sitewide Styles -----*/
 .page-section { 
@@ -115,3 +126,114 @@ header { font-weight: bold; }
 }
 
 /* About Area */
+.profile-pic {
+    background-color: #8E8D8A;
+    height: 26.5rem;
+    width: 26.5rem;
+    border-radius: 100%;
+    /*border: 1px solid #E98074;*/
+}
+
+.profile-pic img {
+    height: 25rem;
+    width: 25rem;
+    border-radius: 100%;
+}
+
+/* Info Selection Buttons */
+.info-selector {
+    align-self: flex-end;
+    text-align: center;
+}
+
+.info-selector li {
+    float: left;
+    display: inline;
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.info-selector p {
+    font-family: 'Righteous', cursive;
+    visibility: hidden;
+    position: absolute;
+    color: #2c3e50;
+}
+
+/* Resting State Buttons */ 
+.outer-halo {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    background-color: #8E8D8A;
+    text-align: right;
+    position: relative;
+    display: flex;
+    transition: .5s;
+}
+
+.inner-halo {
+    height: 3.70rem;
+    width: 3.70rem;
+    border-radius: 100%;
+    background-color: lightgray;
+    animation: out .5s;
+    transition: .5s;
+}
+
+/* Animation for when the user hovers out */
+@keyframes out {
+    from { transform: translate(.3rem, .3rem); }
+    to { transform: translate(0rem , 0rem);}
+}
+
+.info-button-icon {
+    position: absolute;
+    color: #E98074;
+    transition: .5s;
+}
+
+/* Hover State Buttons */
+.info-selector:hover p {
+    visibility: visible;
+    transition: .5s;
+}
+
+.outer-halo:hover .inner-halo {
+    animation: in .5s;
+    transform: translate(.3rem, .3rem);
+}
+
+/* Animation for when the user hovers in */
+@keyframes in {
+    from { transform: translate(0rem , 0rem); }
+    to { transform: translate(.3rem, .3rem); }
+}
+
+.outer-halo:hover i {
+    color: #f7f1e3;
+    transition: .5s;
+}
+
+
+/* Active State Buttons -- Disable any animations */
+.active {
+    background-color: lightgray;
+    transition: 1s;
+}
+
+.active .inner-halo {
+    background-color: #8E8D8A;
+    transform: translate(.3rem, .3rem);
+    transition: .5s;
+    animation: none;
+}
+
+.active i {
+    color: #f7f1e3;
+}
+
+.outer-halo.active:hover .inner-halo {
+    background-color: #8E8D8A;
+    animation: none;
+}
