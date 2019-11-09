@@ -59,54 +59,78 @@ Happy coding!
     </div>
 
     <div id="about" class="page-section">
-        <div class="profile-pic">
-            <img class="non-selectable" src="images/profile_pic.jpg" alt="Me">
+        <div class="me-pic">
+            <div class="profile-pic center-top">
+                <img class="non-selectable" src="images/profile_pic.jpg" alt="Me">
+            </div>
         </div>
-        <div class="">
-            <ul class="info-selector no-bullets">
-                <li class="general-info info-button">
-                    <div class="outer-halo active">
-                        <div class="inner-halo"></div>
-                        <i class="fas fa-info fa-2x info-button-icon center-center"></i>
-                    </div>
+        <!-- Buttons for resume sections -->
+        <div class="resume-selector">
+            <ul class="resume-buttons no-bullets center-top">
+                <li id="general" class="resume-button outer-halo active">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-info fa-2x info-button-icon center-center"></i>
                     <p>General</p>
                 </li>
-                <li class="hobbies info-button">
-                    <div class="outer-halo notransition">
-                        <div class="inner-halo notransition"></div>
-                        <i class="fas fa-guitar fa-2x info-button-icon center-center"></i>
-                    </div>
-                    <p>Interests</p>
-                </li>
-                <li class="languages info-button">
-                    <div class="outer-halo">
-                        <div class="inner-halo"></div>
-                        <i class="fas fa-code fa-2x info-button-icon center-center"></i>
-                    </div>
-                    <p>Technologies</p>
-                </li>
-                <li class="work-experience info-button">
-                    <div class="outer-halo">
-                        <div class="inner-halo"></div>
-                        <i class="fas fa-briefcase fa-2x info-button-icon center-center"></i>
-                    </div>
-                    <p>Work Experience</p>
-                </li>
-                <li class="education info-button">
-                    <div class="outer-halo">
-                        <div class="inner-halo"></div>
-                        <i class="fas fa-graduation-cap fa-2x info-button-icon center-center"></i>
-                    </div>
+                <li id="education" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-graduation-cap fa-2x info-button-icon center-center"></i>
                     <p>Education</p>
                 </li>
-                <li class="locations info-button">
-                    <div class="outer-halo">
-                        <div class="inner-halo"></div>
-                        <i class="fas fa-map-marked fa-2x info-button-icon center-center"></i>
-                    </div>
+                <li id="work" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-briefcase fa-2x info-button-icon center-center"></i>
+                    <p>Work Experience</p>
+                </li>
+                <li id="tech" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-code fa-2x info-button-icon center-center"></i>
+                    <p>Technologies</p>
+                </li>
+                <li id="interests" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-guitar fa-2x info-button-icon center-center"></i>
+                    <p>Interests</p>
+                </li>
+                <li id="places" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-map-marked fa-2x info-button-icon center-center"></i>
                     <p>Locations</p>
                 </li>
             </ul>
+        </div>
+        <!-- Sections for virtual resume -->
+        <div class="resume-sections">
+            <div id="general-section" class="resume-section center-top active">
+                <header>About Me</header>
+                <hr>
+                <p>About!</p>
+            </div>
+            <div id="education-section" class="resume-section center-top">
+                <header>Education</header>
+                <hr>
+                <p>Edu!</p>
+            </div>
+            <div id="work-section" class="resume-section center-top">
+                <header>Work Experience</header>
+                <hr>
+                <p>Wrk!</p>
+            </div>
+            <div id="tech-section" class="resume-section center-top">
+                <header>Technologies</header>
+                <hr>
+                <p>Tech!</p>
+            </div>
+            <div id="interests-section" class="resume-section center-top">
+                <header>Interests</header>
+                <hr>
+                <p>Hobbies!</p>
+            </div>
+            <div id="places-section" class="resume-section center-top">
+                <header>Where I've Been</header>
+                <hr>
+                <p>Where!</p>
+            </div>
         </div>
 
     </div>

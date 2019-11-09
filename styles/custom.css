@@ -46,7 +46,14 @@ header { font-weight: bold; }
     left: 50%;
     transform: translate(-50%, -100%);
     align-self: flex-end;
-    vertical-align: center;
+}
+
+.center-top {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    align-self: flex-start;
 }
 
 .non-selectable {
@@ -60,7 +67,7 @@ header { font-weight: bold; }
     list-style-type: none;
 }
 
-.notransition {
+.no-transition {
     -webkit-transition: none !important;
     -moz-transition: none !important;
     -o-transition: none !important;
@@ -69,21 +76,29 @@ header { font-weight: bold; }
 
 /*----- Sitewide Styles -----*/
 .page-section { 
-    height: 100vh; 
+    height: 90vh; 
     width: 100%; 
-    display: flex;
+    padding: 10vh 0;
+    display: grid;
+    position: relative;
+    overflow: hidden;
 }
 
 
 /*----- Section Styles -----*/
     
 /* Landing Area */
+#landing-area {
+    padding-top: 0;
+    height: 100vh;
+}
 
 .heading-area {
     max-width: 70%;
     font-family: 'Righteous', cursive;
     color: #E98074;
     display: grid;
+    padding-bottom: 3rem;
 } 
 
 .heading-area .pre-header { 
@@ -126,12 +141,36 @@ header { font-weight: bold; }
 }
 
 /* About Area */
+#about {
+    padding: 5% 0;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 75% 25%;
+}
+
+.me-pic {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    position: relative;
+}
+
 .profile-pic {
     background-color: #8E8D8A;
     height: 26.5rem;
     width: 26.5rem;
     border-radius: 100%;
-    /*border: 1px solid #E98074;*/
+}
+
+.resume-selector {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    position: relative;
+}
+
+.resume-sections {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
 }
 
 .profile-pic img {
@@ -141,23 +180,37 @@ header { font-weight: bold; }
 }
 
 /* Info Selection Buttons */
-.info-selector {
-    align-self: flex-end;
-    text-align: center;
+.resume-buttons {
+    display: flex;
 }
 
-.info-selector li {
+.resume-buttons li {
     float: left;
-    display: inline;
-    margin: 0 1rem;
-    overflow: hidden;
+    display: flex;
+    margin: 0 .9rem;
+    overflow: visible;
+    text-align: center;
+    cursor: pointer;
 }
 
-.info-selector p {
+.resume-button p {
     font-family: 'Righteous', cursive;
-    visibility: hidden;
-    position: absolute;
+    font-size: .95rem;
+    opacity: 0;
     color: #2c3e50;
+    padding-top: .5rem;
+    transition: .25s;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    align-self: center;
+}
+
+.resume-section {
+    position: absolute;
+    visibility: hidden;
+    height: 35rem;
+    width: 31rem;
 }
 
 /* Resting State Buttons */ 
@@ -168,7 +221,6 @@ header { font-weight: bold; }
     background-color: #8E8D8A;
     text-align: right;
     position: relative;
-    display: flex;
     transition: .5s;
 }
 
@@ -179,6 +231,7 @@ header { font-weight: bold; }
     background-color: lightgray;
     animation: out .5s;
     transition: .5s;
+    position: absolute;
 }
 
 /* Animation for when the user hovers out */
@@ -194,8 +247,8 @@ header { font-weight: bold; }
 }
 
 /* Hover State Buttons */
-.info-selector:hover p {
-    visibility: visible;
+.resume-button:hover p {
+    opacity: 1;
     transition: .5s;
 }
 
@@ -236,4 +289,8 @@ header { font-weight: bold; }
 .outer-halo.active:hover .inner-halo {
     background-color: #8E8D8A;
     animation: none;
+}
+
+.resume-section.active {
+    visibility: visible;
 }
