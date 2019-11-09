@@ -208,18 +208,19 @@ header { font-weight: bold; }
 
 .resume-section {
     position: absolute;
-    visibility: hidden;
+    opacity: 0;
     height: 35rem;
     width: 31rem;
+    transition: 1s;
+    transform: translateX(-38%);
 }
 
-/* Resting State Buttons */ 
+/* Resting State */ 
 .outer-halo {
     height: 4rem;
     width: 4rem;
     border-radius: 100%;
     background-color: #8E8D8A;
-    text-align: right;
     position: relative;
     transition: .5s;
 }
@@ -229,68 +230,31 @@ header { font-weight: bold; }
     width: 3.70rem;
     border-radius: 100%;
     background-color: lightgray;
-    animation: out .5s;
-    transition: .5s;
     position: absolute;
-}
-
-/* Animation for when the user hovers out */
-@keyframes out {
-    from { transform: translate(.3rem, .3rem); }
-    to { transform: translate(0rem , 0rem);}
+    transition: inherit;
 }
 
 .info-button-icon {
     position: absolute;
     color: #E98074;
-    transition: .5s;
+    transition: inherit;
 }
 
-/* Hover State Buttons */
-.resume-button:hover p {
-    opacity: 1;
-    transition: .5s;
-}
-
-.outer-halo:hover .inner-halo {
-    animation: in .5s;
-    transform: translate(.3rem, .3rem);
-}
-
-/* Animation for when the user hovers in */
-@keyframes in {
-    from { transform: translate(0rem , 0rem); }
-    to { transform: translate(.3rem, .3rem); }
-}
-
-.outer-halo:hover i {
-    color: #f7f1e3;
-    transition: .5s;
-}
-
-
-/* Active State Buttons -- Disable any animations */
+/* Active State */
 .active {
     background-color: lightgray;
-    transition: 1s;
 }
 
 .active .inner-halo {
     background-color: #8E8D8A;
-    transform: translate(.3rem, .3rem);
-    transition: .5s;
-    animation: none;
+    transform: translate(.3rem, .3rem) !important;
 }
 
 .active i {
-    color: #f7f1e3;
-}
-
-.outer-halo.active:hover .inner-halo {
-    background-color: #8E8D8A;
-    animation: none;
+    color: #f7f1e3 !important;
 }
 
 .resume-section.active {
-    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%);
 }

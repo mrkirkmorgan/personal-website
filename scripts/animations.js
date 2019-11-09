@@ -10,15 +10,30 @@ $(document).on("scroll", function() {
 })
 
 // Adds listeners to the outer-halo buttons so the active state can be switched on click
-$(document).ready(function() {
-    $(".outer-halo").click(function(e) {
+$(document).ready(function() 
+{
+    // Click action handler
+    $(".resume-button").click(function(e) {
         // Remove active class from the old button and section (effectively hides them)
-        //$("#" + $(".active").attr('id')).removeClass("active");
         $(".active").removeClass("active");
+
         // Add active class to the new button and section (effectively displays them) 
-        var string = "#" + e.currentTarget.id + "-section"
-        var section = $(string);
-        section.addClass("active");
+        $("#" + e.currentTarget.id + "-section").addClass("active");
         $(this).addClass("active");
     });
+
+    // Hover-in & Hover-out action handler
+    $(".resume-button").hover(
+        // Hover-in function
+        function(e) {
+            if(!e.currentTarget.classList.contains('active')) {
+                e.currentTarget.children[0].style.transform = "translate(.3rem, .3rem)";
+                e.currentTarget.children[1].style.color = "#f7f1e3";
+            }
+    }, 
+        // Hover out function
+        function(e) {
+            e.currentTarget.children[0].style.transform = "translate(0rem, 0rem)";
+            e.currentTarget.children[1].style.color = "#E98074";
+    })
 })
