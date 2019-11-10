@@ -1,4 +1,22 @@
-<!-- An html file to serve as the user entry point for my personal website -->
+<!--
+
+    |||     |||   |||||||/    |||         |||         /|||||||\     |||
+    |||\   /|||   |||         |||         |||        |||     |||    |||
+    |||||||||||   |||||||     |||         |||        |||     |||    |||
+    |||/   \|||   |||         |||         |||        |||     |||    
+    |||     |||   |||||||\    |||||||\    |||||||\    \|||||||/     |||
+
+If you've stumbled here, you're curious enough to know how I built this, I'm humbled!
+
+If you're a recruiter or someone willing to work with me, please feel free to reach out!
+If you're a curious bystander and you have questions because you're developing your own
+personal site, still please feel free to reach out! 
+
+Happy coding!
+
+-->
+
+<!-- This html file will serve as the entry point for my personal website -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,38 +34,112 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/resume-buttons.css">
     <!-- Custom JS -->
-    <script src="scripts/utility.js" rel="script"></script>
+    <script src="scripts/animations.js" rel="script"></script>
 
     <title>Kirk P. Morgan</title>
     <link rel="shortcut icon" type="image/png" href="images/icons/favicon.png">
 </head>
 <body class="no-margins">
+    <!-- Landing area section -->
     <div id="landing-area" class="page-section">
         <div class="heading-area center-center non-selectable">
             <p class="pre-header no-margins">Hello world, my name is</p>
             <header class="header">Kirk Morgan</header>
-            <p class="no-margins">
+            <p class="header-statement no-margins">
                 I'm a Software Engineer based in Philadelphia, PA who recently graduated from Northeastern University.
                 I've worn many hats professionally moving from working on the back-end with technologies like C# and Java
                 to working on the front-end using JavaScript and React.js to working as a financial analyst investigating
                 the markets. 
             </p>
         </div>
-        <div class="bounce center-bottom">
+        <div class="center-bottom">
             <i class="fas fa-chevron-down fa-3x arrow"></i>
         </div>
     </div>
-
+    <!-- About me section -->
     <div id="about" class="page-section">
-
+        <div class="profile-portrait">
+            <div class="portrait-halo center-top">
+                <img class="portrait non-selectable" src="images/profile_pic.jpg" alt="Me">
+            </div>
+        </div>
+        <!-- Buttons for resume sections -->
+        <div class="resume-section-selector">
+            <ul class="resume-buttons no-bullets">
+                <li id="general" class="resume-button outer-halo active">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-info fa-2x resume-icon"></i>
+                    <p class="resume-label">General</p>
+                </li>
+                <li id="education" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-graduation-cap fa-2x resume-icon"></i>
+                    <p class="resume-label">Education</p>
+                </li>
+                <li id="work" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-briefcase fa-2x resume-icon"></i>
+                    <p class="resume-label">Work Experience</p>
+                </li>
+                <li id="tech" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-code fa-2x resume-icon"></i>
+                    <p class="resume-label">Technologies</p>
+                </li>
+                <li id="interests" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-guitar fa-2x resume-icon"></i>
+                    <p class="resume-label">Interests</p>
+                </li>
+                <li id="places" class="resume-button outer-halo">
+                    <div class="inner-halo"></div>
+                    <i class="fas fa-map-marked fa-2x resume-icon"></i>
+                    <p class="resume-label">Locations</p>
+                </li>
+            </ul>
+        </div>
+        <!-- Text sections for virtual resume -->
+        <div class="resume-sections">
+            <div id="general-section" class="resume-section active">
+                <header>About Me</header>
+                <hr>
+                <p>About!</p>
+            </div>
+            <div id="education-section" class="resume-section">
+                <header>Education</header>
+                <hr>
+                <p>Edu!</p>
+            </div>
+            <div id="work-section" class="resume-section">
+                <header>Work Experience</header>
+                <hr>
+                <p>Wrk!</p>
+            </div>
+            <div id="tech-section" class="resume-section">
+                <header>Technologies</header>
+                <hr>
+                <p>Tech!</p>
+            </div>
+            <div id="interests-section" class="resume-section">
+                <header>Interests</header>
+                <hr>
+                <p>Hobbies!</p>
+            </div>
+            <div id="places-section" class="resume-section">
+                <header>Where I've Been</header>
+                <hr>
+                <p>Where!</p>
+            </div>
+        </div>
     </div>
-
+    <!-- Projects section -->
     <div id="projects" class="page-section">
 
     </div>
-
+    <!-- Contact me section -->
     <div id="contact" class="page-section">
         
     </div>

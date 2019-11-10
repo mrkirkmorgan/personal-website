@@ -1,0 +1,188 @@
+/* A custom css file for my personal website */
+
+/* CSS Reset */
+* {
+    border: 0 none;
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+
+/*---------- General Styles ----------*/
+
+body {
+    background-color: #EAE7DC;
+    padding: 0 6rem;
+}
+
+header { font-weight: bold; }
+
+
+/*---------- Utility Styles ----------*/
+
+.no-margins { margin: 0; }
+
+.center-center {
+    /* Flex Box */
+    align-self: center;
+    justify-self: center;
+}
+
+.center-bottom {
+    /* Flex Box */
+    align-self: flex-end;
+    justify-self: center;
+}
+
+.center-top {
+    /* Flex Box */
+    align-self: flex-start;
+    justify-self: center;
+}
+
+.non-selectable {
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;  
+    -webkit-user-select: none;      
+}
+
+.no-bullets { list-style-type: none; }
+
+.no-transition {
+    transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -webkit-transition: none !important;
+}
+
+
+/*---------- Sitewide Styles ----------*/
+
+.page-section { 
+    display: grid;
+    height: 90vh; 
+    overflow: hidden;
+    padding: 10vh 0;
+    position: relative;
+    width: 100%; 
+}
+
+
+/*---------- Section Styles ----------*/
+    
+/*--- Landing Area ---*/
+
+#landing-area {
+    font-family: 'Righteous', cursive;
+    grid-template-rows: 94% auto;
+    height: 100vh;
+    padding-top: 0;
+}
+
+.heading-area {
+    color: #E98074;
+    display: grid;
+    max-width: 70%;
+    padding-bottom: 3rem;
+} 
+
+.heading-area .pre-header { font-size: 2.5rem; } 
+
+.heading-area header {
+    color: #E85A4F;
+    font-size: 6rem;
+    letter-spacing: .3rem;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+}
+
+.heading-area .header-statement { 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.4rem; 
+} 
+
+.arrow {
+    animation: bounce 3s infinite; 
+    color: rgba(232, 90, 79, .7); 
+}
+
+
+/*--- About Area ---*/
+
+#about {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 75% 25%;
+    padding: 5% 0;
+}
+
+.profile-portrait {
+    display: flex;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    justify-content: center;
+}
+
+.portrait-halo {
+    background-color: #8E8D8A;
+    border-radius: 100%;
+    height: 26.5rem;
+    width: 26.5rem;
+}
+
+.portrait {
+    border-radius: 100%;
+    height: 25rem;
+    width: 25rem;
+}
+
+.resume-section-selector {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    position: relative;
+}
+
+.resume-sections {
+    display: flex;
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    justify-content: center;
+    position: relative;
+}
+
+.resume-section {
+    height: 35rem;
+    opacity: 0;
+    position: absolute;
+    transform: translateX(10%);
+    transition: 1s;
+    width: 31rem;
+}
+
+.resume-section.active {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+
+/*---------- Keyframe Animations ----------*/
+
+/* Animation for the bouncing arrow located at the bottom of the landing-area */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+}
