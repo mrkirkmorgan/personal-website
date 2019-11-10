@@ -1,0 +1,108 @@
+/* The css for the animations of the resume buttons located in the about-me section */
+
+.resume-buttons { 
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transition: .5s; 
+}
+
+.resume-button {
+    cursor: pointer;
+    display: flex;
+    margin: 0 .9rem;
+    transition: inherit;
+}
+
+.resume-label {
+    color: #2c3e50;
+    font-family: 'Righteous', cursive;
+    font-size: .95rem;
+    left: 50%;
+    opacity: 0;
+    padding-top: .5rem;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    transition: inherit;
+    -webkit-transform: translateX(-50%);
+}
+
+
+/*---------- Button States ----------*/
+
+/*--- Resting State ---*/ 
+
+.outer-halo {
+    background-color: #8E8D8A;
+    border-radius: 100%;
+    height: 4rem;
+    position: relative;
+    width: 4rem;
+}
+
+.inner-halo {
+    animation: out .5s;
+    background-color: lightgray;
+    border-radius: 100%;
+    height: 3.70rem;
+    position: absolute;
+    transition: inherit;
+    width: 3.70rem;
+}
+
+.resume-icon {
+    color: #E98074;
+    margin: auto;
+    transition: inherit;
+    z-index: 1;
+}
+
+
+/*--- Hover State ---*/
+
+.outer-halo:hover .inner-halo {
+    animation: in .5s;
+    transform: translate(.3rem, .3rem);
+}
+
+/* No animations should happen if the halos are active */
+.outer-halo:hover.active .inner-halo { animation: none; }
+
+.outer-halo:hover .resume-icon {
+    color: #f7f1e3;
+    transition: inherit;
+}
+
+.resume-button:hover .resume-label {
+    opacity: 1;
+    transition: inherit;
+}
+
+
+/*--- Active State ---*/
+
+.active.outer-halo { background-color: lightgray; }
+
+.active .inner-halo {
+    animation: none;
+    background-color: #8E8D8A;
+    transform: translate(.3rem, .3rem);
+}
+
+.active .resume-icon { color: #f7f1e3; }
+
+
+/*---------- Keyframe Animations ----------*/
+
+/* Animation for when the user hovers in */
+@keyframes in {
+    from { transform: translate(0rem , 0rem); }
+    to { transform: translate(.3rem, .3rem); }
+}
+
+/* Animation for when the user hovers out */
+@keyframes out {
+    from { transform: translate(.3rem, .3rem); }
+    to { transform: translate(0rem , 0rem);}
+}

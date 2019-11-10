@@ -21,19 +21,4 @@ $(document).ready(function()
         $("#" + e.currentTarget.id + "-section").addClass("active");
         $(this).addClass("active");
     });
-
-    // Hover-in & Hover-out action handler
-    $(".resume-button").hover(
-        // Hover-in function
-        function(e) {
-            if(!e.currentTarget.classList.contains('active')) {
-                e.currentTarget.children[0].style.transform = "translate(.3rem, .3rem)";
-                e.currentTarget.children[1].style.color = "#f7f1e3";
-            }
-    }, 
-        // Hover out function
-        function(e) {
-            e.currentTarget.children[0].style.transform = "translate(0rem, 0rem)";
-            e.currentTarget.children[1].style.color = "#E98074";
-    })
 })
