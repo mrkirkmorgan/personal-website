@@ -16,6 +16,10 @@
 
 /*---------- General Styles ----------*/
 
+button {
+    cursor: pointer;
+}
+
 body {
     background-color: #EAE7DC;
     padding: 0 6rem;
@@ -77,7 +81,7 @@ header { font-weight: bold; }
 
 /*---------- Section Styles ----------*/
     
-/*--- Landing Area ---*/
+/*--- Landing Section ---*/
 
 #landing-area {
     font-family: 'Righteous', cursive;
@@ -114,7 +118,7 @@ header { font-weight: bold; }
 }
 
 
-/*--- About Area ---*/
+/*--- About Section ---*/
 
 #about {
     grid-template-columns: 50% 50%;
@@ -169,6 +173,24 @@ header { font-weight: bold; }
 .resume-section.active {
     opacity: 1;
     transform: translateX(0%);
+}
+
+
+/*--- Contact Section ---*/
+
+#contact {
+
+}
+
+.email-me {
+
+}
+
+.email-me .email-button {
+    background-color: transparent;
+    border: 1px solid #E98074;
+    border-radius: 5px;
+    color: #E98074;
 }
 
 
