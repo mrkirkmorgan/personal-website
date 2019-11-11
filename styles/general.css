@@ -10,12 +10,12 @@
     outline: 0;
 	padding: 0;
     vertical-align: baseline;
-    
+
     /* Default item is not selectable */
     user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;  
-    -webkit-user-select: none;    
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 
@@ -31,11 +31,11 @@ body {
     position: relative;
 }
 
-header { 
+header {
     color: #E85A4F;
     font-family: 'Righteous', cursive;
     font-size: 3rem;
-    font-weight: bold; 
+    font-weight: bold;
     margin: 2rem;
 }
 
@@ -73,8 +73,8 @@ footer p {
 .non-selectable {
     user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;  
-    -webkit-user-select: none;      
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 .no-bullets { list-style-type: none; }
@@ -88,18 +88,18 @@ footer p {
 
 /*---------- Sitewide Styles ----------*/
 
-.page-section { 
+.page-section {
     display: grid;
-    height: 90vh; 
+    height: 90vh;
     overflow: hidden;
     padding: 10vh 0;
     position: relative;
-    width: 100%; 
+    width: 100%;
 }
 
 
 /*---------- Section Styles ----------*/
-    
+
 /*--- Landing Section ---*/
 
 #landing-area {
@@ -114,9 +114,9 @@ footer p {
     display: grid;
     max-width: 70%;
     padding-bottom: 3rem;
-} 
+}
 
-.heading-area .pre-header { font-size: 2.5rem; } 
+.heading-area .pre-header { font-size: 2.5rem; }
 
 .heading-area header {
     font-size: 6rem;
@@ -125,14 +125,14 @@ footer p {
     padding-left: 2rem;
 }
 
-.heading-area .header-statement { 
+.heading-area .header-statement {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.4rem; 
-} 
+    font-size: 1.4rem;
+}
 
 .arrow {
-    animation: bounce 3s infinite; 
-    color: rgba(232, 90, 79, .7); 
+    animation: bounce 3s infinite;
+    color: rgba(232, 90, 79, .7);
 }
 
 
@@ -302,7 +302,7 @@ footer p {
 #message-box {
     box-sizing: content-box;
     height: 15rem;
-    width: 60% !important; 
+    width: 60% !important;
 }
 
 .additional-links {
@@ -371,6 +371,51 @@ footer {
     top: 0;
     overflow: hidden;
     z-index: -1;
+}
+
+
+/*--- Projects Area ---*/
+
+#projects {
+    grid-template-columns: auto;
+    grid-template-rows: 8% 56% 28% 10%;
+    height: 175vh; /* ~195% the size of the normal section */
+    padding: 5% 0;
+}
+
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.featured-projects header {
+    margin-bottom: 2rem;
+}
+
+.featured-project {
+    align-self: center;
+    background-color: gray;
+    height: 85%;
+    width: 75%;
+}
+
+.all-projects {
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.project {
+    background-color: lightgray;
+    margin: 1.5%;
+    width: 30%;
 }
 
 
