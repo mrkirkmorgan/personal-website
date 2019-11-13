@@ -142,7 +142,7 @@ Happy coding!
     <!-- Contact me section -->
     <div id="contact" class="page-section">
         <div class="contact-pitch">
-            <header>We Should Get In Touch!</header>
+            <header class="header contact-header">We Should Get In Touch!</header>
             <p>
                 There will be some text here and ideally it will be a pitch of some kind that 
                 hopefully won't be too pitchy...
@@ -150,20 +150,39 @@ Happy coding!
         </div>
         <div class="email-me">
             <button class="email-button" type="button">Leave a Comment</button>
-            <div class="email-form">
-                <input type="text" name="subject" placeholder="Subject">
-                <input type="text" name="message" placeholder="Message">
-                <p>Note: If you use this method, include contact information so I can contact you back.</p>
+            <button class="email-button" type="button">Email Me</button>
+            <div class="dissappear-box">
+                <form class="email-form">
+                        <textarea id="subject-box" placeholder="Subject" rows="1"></textarea>
+                        <textarea id="message-box" maxlength="1000" placeholder="Message"></textarea>
+                        <p>Note: If you use this method, include contact information so I can contact you back.</p>
+                </form>
             </div>
         </div>
         <div class="additional-contact">
             <header>Other Resources</header>
-            <ul class="addtl-contact-links">
-                <li id="linked-in"><i class="fab fa-linkedin-in"></i></li>
-                <li id="instagram"><i class="fab fa-instagram"></i></li>
-                <li id="git-hub"><i class="fab fa-github"></i></li>
-                <li id="resume"><i class="far fa-file-word"></i></li>
+            <ul class="contact-links no-bullets">
+                <li id="linked-in" class="contact-link">
+                    <div class="contact-halo">
+                        <i class="fab fa-linkedin-in fa-3x contact-icon"></i>
+                    </div>
+                </li>
+                <li id="instagram" class="contact-link">
+                    <div class="contact-halo">
+                        <i class="fab fa-instagram fa-3x contact-icon"></i>
+                    </div>
+                </li>
+                <li id="git-hub" class="contact-link">
+                    <div class="contact-halo">
+                        <i class="fab fa-github fa-3x contact-icon"></i>
+                    </div>
+                </li>
+                <li id="resume" class="contact-link">
+                    <div class="contact-halo">
+                        <i class="far fa-file-word fa-3x contact-icon"></i>
+                    </div>
+                </li>
             </ul>
-    </div>
+        </div>
 </body>
 </html>

@@ -25,7 +25,13 @@ body {
     padding: 0 6rem;
 }
 
-header { font-weight: bold; }
+header { 
+    color: #E85A4F;
+    font-family: 'Righteous', cursive;
+    font-size: 3rem;
+    font-weight: bold; 
+    margin: 2rem;
+}
 
 
 /*---------- Utility Styles ----------*/
@@ -48,6 +54,10 @@ header { font-weight: bold; }
     /* Flex Box */
     align-self: flex-start;
     justify-self: center;
+}
+
+.horizontal-list {
+    display: flex;
 }
 
 .non-selectable {
@@ -100,7 +110,6 @@ header { font-weight: bold; }
 .heading-area .pre-header { font-size: 2.5rem; } 
 
 .heading-area header {
-    color: #E85A4F;
     font-size: 6rem;
     letter-spacing: .3rem;
     margin-bottom: 3rem;
@@ -179,7 +188,15 @@ header { font-weight: bold; }
 /*--- Contact Section ---*/
 
 #contact {
+    text-align: center;
+}
 
+.contact-header {
+
+}
+
+.contact-pitch {
+    font-size: 1.25rem;
 }
 
 .email-me {
@@ -191,7 +208,62 @@ header { font-weight: bold; }
     border: 1px solid #E98074;
     border-radius: 5px;
     color: #E98074;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: .75rem 1.25rem ;
 }
+
+.dissappear-box {
+    display: none;
+    visibility: hidden;
+}
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email-form textarea {
+    border: 1px solid gray;
+    box-sizing: border-box;
+    display: block;
+    width: 40%;
+    margin-bottom: 1rem;
+    resize: none;
+    font-size: 1.2rem;
+}
+
+#subject-box {
+    margin-top: 2rem;
+}
+
+#message-box {
+    height: 15rem;
+    width: 60%;
+    box-sizing: content-box;
+}
+
+.contact-links {
+    display: flex;
+}
+
+.contact-link {
+    margin: 0 1rem;
+}
+
+.contact-halo {
+    background-color: #E98074;
+    border-radius: 100%;
+    position: relative;
+    height: 5rem;
+    width: 5rem;
+}
+
+.contact-icon {
+    margin: auto;
+}
+
 
 
 /*---------- Keyframe Animations ----------*/
