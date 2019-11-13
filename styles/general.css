@@ -16,14 +16,22 @@
 
 /*---------- General Styles ----------*/
 
+button {
+    cursor: pointer;
+}
+
 body {
     background-color: #EAE7DC;
     padding: 0 6rem;
+    position: relative;
 }
 
-header { 
+header {
+    color: #E85A4F;
     font-family: 'Righteous', cursive;
-    font-weight: bold; 
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 2rem;
 }
 
 
@@ -49,11 +57,15 @@ header {
     justify-self: center;
 }
 
+.horizontal-list {
+    display: flex;
+}
+
 .non-selectable {
     user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;  
-    -webkit-user-select: none;      
+    -ms-user-select: none;
+    -webkit-user-select: none;
 }
 
 .no-bullets { list-style-type: none; }
@@ -68,19 +80,19 @@ header {
 
 /*---------- Sitewide Styles ----------*/
 
-.page-section { 
+.page-section {
     display: grid;
-    height: 90vh; 
+    height: 90vh;
     overflow: hidden;
     padding: 10vh 0;
     position: relative;
-    width: 100%; 
+    width: 100%;
 }
 
 
 /*---------- Section Styles ----------*/
-    
-/*--- Landing Area ---*/
+
+/*--- Landing Section ---*/
 
 #landing-area {
     font-family: 'Righteous', cursive;
@@ -94,30 +106,29 @@ header {
     display: grid;
     max-width: 70%;
     padding-bottom: 3rem;
-} 
+}
 
-.heading-area .pre-header { font-size: 2.5rem; } 
+.heading-area .pre-header { font-size: 2.5rem; }
 
 .heading-area header {
-    color: #E85A4F;
     font-size: 6rem;
     letter-spacing: .3rem;
     margin-bottom: 3rem;
     padding-left: 2rem;
 }
 
-.heading-area .header-statement { 
+.heading-area .header-statement {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.4rem; 
-} 
+    font-size: 1.4rem;
+}
 
 .arrow {
-    animation: bounce 3s infinite; 
-    color: rgba(232, 90, 79, .7); 
+    animation: bounce 3s infinite;
+    color: rgba(232, 90, 79, .7);
 }
 
 
-/*--- About Area ---*/
+/*--- About Section ---*/
 
 #about {
     grid-template-columns: 50% 50%;
@@ -217,6 +228,161 @@ header {
     background-color: lightgray;
     margin: 1.5%;
     width: 30%;
+}
+
+/*--- Projects Area ---*/
+
+#projects {
+    grid-template-columns: auto;
+    grid-template-rows: 8% 56% 28% 10%;
+    height: 175vh; /* ~195% the size of the normal section */
+    padding: 5% 0;
+}
+
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.featured-projects header {
+    margin-bottom: 2rem;
+}
+
+.featured-project {
+    align-self: center;
+    background-color: gray;
+    height: 85%;
+    width: 75%;
+}
+
+.all-projects {
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.project {
+    background-color: lightgray;
+    margin: 1.5%;
+    width: 30%;
+/*--- Contact Section ---*/
+
+#contact {
+    grid-template-columns: auto;
+    grid-template-rows: 21rem auto 21rem;
+    height: auto;
+    text-align: center;
+}
+
+.contact-pitch {
+    grid-row: 1;
+    font-size: 1.25rem;
+    max-width: 70%;
+    margin: auto;
+}
+
+.email-me {
+    grid-row: 2;
+}
+
+.email-me button {
+    background-color: transparent;
+    border: 1px solid #E98074;
+    border-radius: 5px;
+    color: #E98074;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 1rem;
+    padding: .75rem 1.25rem;
+}
+
+.dissappear-box {
+    display: none;
+}
+
+.email-form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.email-form textarea {
+    background-color: rgba(223, 230, 233, 0.6);
+    border: 1px solid gray;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    resize: none;
+    width: 40%;
+}
+
+#subject-box {
+    margin-top: 2rem;
+}
+
+#message-box {
+    box-sizing: content-box;
+    height: 15rem;
+    width: 60%;
+}
+
+.additional-links {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    grid-row: 3;
+    margin: auto;
+    max-width: 70%;
+}
+
+.additional-links header {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.contact-links {
+    display: flex;
+}
+
+.contact-link {
+    margin: 0 1rem;
+}
+
+.contact-halo {
+    background-color: #E98074;
+    border-radius: 100%;
+    display: flex;
+    height: 5rem;
+    position: relative;
+    width: 5rem;
+}
+
+.contact-icon {
+    margin: auto;
+}
+
+
+/*--- Footer ---*/
+
+footer {
+    background-color: #8E8D8A;
+    bottom: 0;
+    color: #f7f1e3;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+footer p {
+    padding-left: 5rem;
 }
 
 
