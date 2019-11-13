@@ -195,8 +195,8 @@ footer p {
 #contact {
     grid-template-columns: auto;
     grid-template-rows: 21rem auto 21rem;
-    text-align: center;
     height: auto;
+    text-align: center;
 }
 
 .contact-pitch {
@@ -217,8 +217,8 @@ footer p {
     color: #E98074;
     font-size: 1.1rem;
     font-weight: bold;
-    padding: .75rem 1.25rem;
     margin: 1rem;
+    padding: .75rem 1.25rem;
 }
 
 .dissappear-box {
@@ -226,20 +226,20 @@ footer p {
 }
 
 .email-form {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .email-form textarea {
+    background-color: rgba(223, 230, 233, 0.6);
     border: 1px solid gray;
     box-sizing: border-box;
     display: block;
-    width: 40%;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     resize: none;
-    font-size: 1.2rem;
-    background-color: rgba(223, 230, 233, 0.6);
+    width: 40%;
 }
 
 #subject-box {
@@ -247,18 +247,18 @@ footer p {
 }
 
 #message-box {
+    box-sizing: content-box;
     height: 15rem;
     width: 60%;
-    box-sizing: content-box;
 }
 
 .additional-links {
-    grid-row: 3;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    max-width: 70%;
+    grid-row: 3;
     margin: auto;
+    max-width: 70%;
 }
 
 .additional-links header {
@@ -277,10 +277,10 @@ footer p {
 .contact-halo {
     background-color: #E98074;
     border-radius: 100%;
-    position: relative;
-    height: 5rem;
-    width: 5rem;
     display: flex;
+    height: 5rem;
+    position: relative;
+    width: 5rem;
 }
 
 .contact-icon {
@@ -289,13 +289,14 @@ footer p {
 
 
 /*--- Footer ---*/
-.footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: #f7f1e3;
+
+footer {
     background-color: #8E8D8A;
+    bottom: 0;
+    color: #f7f1e3;
+    left: 0;
+    position: absolute;
+    width: 100%;
 }
 
 
