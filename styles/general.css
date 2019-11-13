@@ -23,6 +23,7 @@ button {
 body {
     background-color: #EAE7DC;
     padding: 0 6rem;
+    position: relative;
 }
 
 header { 
@@ -31,6 +32,10 @@ header {
     font-size: 3rem;
     font-weight: bold; 
     margin: 2rem;
+}
+
+footer p {
+    padding-left: 5rem;
 }
 
 
@@ -188,34 +193,36 @@ header {
 /*--- Contact Section ---*/
 
 #contact {
+    grid-template-columns: auto;
+    grid-template-rows: 21rem auto 21rem;
     text-align: center;
-}
-
-.contact-header {
-
+    height: auto;
 }
 
 .contact-pitch {
+    grid-row: 1;
     font-size: 1.25rem;
+    max-width: 70%;
+    margin: auto;
 }
 
 .email-me {
-
+    grid-row: 2;
 }
 
-.email-me .email-button {
+.email-me button {
     background-color: transparent;
     border: 1px solid #E98074;
     border-radius: 5px;
     color: #E98074;
     font-size: 1.1rem;
     font-weight: bold;
-    padding: .75rem 1.25rem ;
+    padding: .75rem 1.25rem;
+    margin: 1rem;
 }
 
 .dissappear-box {
     display: none;
-    visibility: hidden;
 }
 
 .email-form {
@@ -232,6 +239,7 @@ header {
     margin-bottom: 1rem;
     resize: none;
     font-size: 1.2rem;
+    background-color: rgba(223, 230, 233, 0.6);
 }
 
 #subject-box {
@@ -242,6 +250,20 @@ header {
     height: 15rem;
     width: 60%;
     box-sizing: content-box;
+}
+
+.additional-links {
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 70%;
+    margin: auto;
+}
+
+.additional-links header {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
 }
 
 .contact-links {
@@ -258,12 +280,23 @@ header {
     position: relative;
     height: 5rem;
     width: 5rem;
+    display: flex;
 }
 
 .contact-icon {
     margin: auto;
 }
 
+
+/*--- Footer ---*/
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #f7f1e3;
+    background-color: #8E8D8A;
+}
 
 
 /*---------- Keyframe Animations ----------*/

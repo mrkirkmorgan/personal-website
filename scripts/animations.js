@@ -21,4 +21,8 @@ $(document).ready(function()
         $("#" + e.currentTarget.id + "-section").addClass("active");
         $(this).addClass("active");
     });
+
+    $(".comment-button").click(function(e) {
+        $(".dissappear-box").slideToggle();
+    });
 })
