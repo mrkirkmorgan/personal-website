@@ -1,0 +1,11 @@
+/* The css for the background of the website  */
+
+.wave {
+    position: absolute;
+}
+
+#wave1, #wave2 {
+    transform: rotate(216deg);
+    right: -10%;
+    top: -10%;
+}

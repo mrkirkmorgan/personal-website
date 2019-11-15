@@ -36,8 +36,10 @@ Happy coding!
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/resume-buttons.css">
+    <link rel="stylesheet" href="styles/background.css">
     <!-- Custom JS -->
     <script src="scripts/animations.js" rel="script"></script>
+    <script src="scripts/wave-animation.js" rel="script"></script>
 
     <title>Kirk P. Morgan</title>
     <link rel="shortcut icon" type="image/png" href="images/icons/favicon.png">
@@ -187,5 +189,13 @@ Happy coding!
         </div>
     </div>
     <footer><p>Developed by Kirk P. Morgan 2019©</p></footer>
+    <div class="background">
+        <canvas id="wave1" class="wave" data-height="1000" data-width="1000" data-color="209, 204, 192, 0.7" 
+        data-isOscillating="false" data-speed="3" data-offset="0" data-magnitude="14" data-width-range="500" 
+        data-lowest-width="100"></canvas>
+        <canvas id="wave2" class="wave" data-height="1000" data-width="1000" data-color="209, 204, 192, 0.5" 
+        data-isOscillating="false" data-speed="1" data-offset=".5" data-magnitude="10" data-width-range="500" 
+        data-lowest-width="100"></canvas>
+    </div>
 </body>
 </html>
