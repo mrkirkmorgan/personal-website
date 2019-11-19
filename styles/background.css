@@ -4,8 +4,88 @@
     position: absolute;
 }
 
-#wave1, #wave2 {
+#wave1 {
     transform: rotate(216deg);
     right: -10%;
     top: -10%;
+}
+
+#wave2 {
+    transform: rotate(216deg);
+    right: -10.4%;
+    top: -10.4%;
+}
+
+#wave3 {
+    transform: rotate(0deg);
+    top: 10%;
+}
+
+#wave4 {
+    transform: rotate(0deg);
+    top: 10%;
+}
+
+#wave5 {
+    transform: rotate(180deg);
+    top:36%;
+}
+
+#wave6 {
+    transform: rotate(180deg);
+    top: 36%;
+}
+
+#wave7 {
+    top:73%;
+}
+
+#wave8 {
+    top:73%;
+}
+
+.block {
+    position: absolute;
+    border-radius: 10px;
+    z-index: -2;
+}
+
+@keyframes fall {
+    0%{transform: translateY(0%);}
+    100%{transform: translateY(100%);}
+}
+
+@keyframes moveRight {
+    0%{transform: translateX(0%);}
+    100%{transform: translateX(100%);}
+}
+
+@keyframes rise {
+    0%{transform: translateY(100%);}
+    100%{transform: translateY(0%);}
+}
+
+@keyframes moveLeft {
+    0%{transform: translateX(100%);}
+    100%{transform: translateX(0%);}
+}
+
+@keyframes fallRight {
+    0%{transform: translateX(0%) translateY(0%);}
+    100%{transform: translateX(100%) translateY(100%);}
+}
+
+@keyframes fallLeft {
+    0%{transform: translateX(100%) translateY(0%);}
+    100%{transform: translateX(0%) translateY(100%);}
+}
+
+@keyframes riseRight {
+    0%{transform: translateX(0%) translateY(100%);}
+    100%{transform: translateX(100%) translateY(0%);}
+}
+
+@keyframes riseLeft {
+    0%{transform: translateX(100%) translateY(100%);}
+    100%{transform: translateX(0%) translateY(0%);}
 }

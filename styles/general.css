@@ -135,14 +135,23 @@ footer p {
 
 #about {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 75% 25%;
+    grid-template-rows: 30% 58% 12%;
+    height: 115vh;
     padding: 5% 0;
+}
+
+.about-header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    text-align: center;
 }
 
 .profile-portrait {
     display: flex;
-    grid-column-start: 1;
-    grid-row-start: 1;
+    grid-row: 2;
     justify-content: center;
 }
 
@@ -161,15 +170,15 @@ footer p {
 
 .resume-section-selector {
     grid-column-start: 1;
-    grid-row-start: 2;
+    grid-row: 3;
     position: relative;
 }
 
 .resume-sections {
     display: flex;
     grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
     justify-content: center;
     position: relative;
 }
@@ -301,13 +310,14 @@ footer {
 
 /*--- Background ---*/
 
-.background {
+#background {
     position: absolute;
     height: 100%;
     left: 0;
     width: 100%;
     top: 0;
     overflow: hidden;
+    z-index: -1;
 }
 
 
