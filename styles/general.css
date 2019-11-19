@@ -282,6 +282,14 @@ footer p {
     margin: 0 1rem;
 }
 
+.resource-link {
+    text-decoration: none;
+}
+
+.resource-link:visited {
+    color: initial;
+}
+
 .contact-halo {
     background-color: #E98074;
     border-radius: 100%;
