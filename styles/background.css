@@ -37,11 +37,11 @@
 }
 
 #wave7 {
-    top:73%;
+    top:74%;
 }
 
 #wave8 {
-    top:73%;
+    top:74%;
 }
 
 .block {
@@ -51,13 +51,12 @@
 }
 
 @keyframes fall {
-    0%{transform: translateY(0%);}
-    100%{transform: translateY(100%);}
+    100%{transform: translateY(5000px);}
 }
 
 @keyframes moveRight {
-    0%{transform: translateX(0%);}
-    100%{transform: translateX(100%);}
+    0%{transform: rotate(90deg);}
+    100%{transform: translateX(5000px) rotate(90deg);}
 }
 
 @keyframes rise {
@@ -76,8 +75,8 @@
 }
 
 @keyframes fallLeft {
-    0%{transform: translateX(100%) translateY(0%);}
-    100%{transform: translateX(0%) translateY(100%);}
+    0%{transform: rotate(45deg)}
+    100%{transform: translateX(-5000px) translateY(5000px) rotate(45deg);}
 }
 
 @keyframes riseRight {
@@ -86,6 +85,6 @@
 }
 
 @keyframes riseLeft {
-    0%{transform: translateX(100%) translateY(100%);}
-    100%{transform: translateX(0%) translateY(0%);}
+    0%{transform: rotate(-45deg);}
+    100%{transform: translateX(-5000px) translateY(-5000px) rotate(-45deg);}
 }

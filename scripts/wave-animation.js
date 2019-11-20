@@ -4,7 +4,7 @@
 let canvases = [];
 let waves = [];
 const buffer = 10; // A constant buffer determining when waves should be created/deleted
-const interval = 100; // A interval determining how often the waves should be updated
+const waveInterval = 100; // A interval determining how often the waves should be updated
 
 // Wait until the DOM is loaded before creating Wave objects
 document.addEventListener('DOMContentLoaded', createWaves, false);
@@ -39,11 +39,11 @@ function createWaves() {
         waves.push(new Wave(element, width, height, magnitude, widthRange, lowestWidth, color, oscillation, speed, sinOffset));
     });
 
-    setInterval("run()", interval);
+    setInterval("wavesRun()", waveInterval);
 }
 
 // Runs all wave animations on the current page
-function run() {
+function wavesRun() {
     waves.forEach((wave) => {
         wave.update();
         wave.clear();
