@@ -216,6 +216,13 @@ footer p {
     padding: .5rem 0;
 }
 
+.project {
+    background-color: lightgray;
+    margin: 1.5%;
+    width: 30%;
+}
+
+
 /*--- Contact Section ---*/
 
 #contact {
