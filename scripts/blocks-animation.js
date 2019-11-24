@@ -39,8 +39,6 @@ class Block {
     constructor(id) {
         this.width = generateNumber(50, 80); // Block length will be 3x longer than the width
         this.color = generateNumber(1, 6);
-        this.direction = generateNumber(1, 4);
-        this.orientation = generateNumber(1, 3);
         this.speed = generateNumber(250, 20).toString();
         this.id = id;
         this.createBlock();
@@ -58,28 +56,32 @@ class Block {
 
         // Select the color
         switch (this.color) {
-            case 1: newBlock.style.backgroundColor = "rgba(245, 246, 250, 0.5)";
+            case 1: newBlock.style.backgroundColor = "rgba(245, 246, 250, 0.4)";
             break;
-            case 2: newBlock.style.backgroundColor = "rgba(245, 246, 250, 0.5)";
+            case 2: newBlock.style.backgroundColor = "rgba(149, 175, 192, 0.2)";
             break;
-            case 3: newBlock.style.backgroundColor = "rgba(245, 246, 250, 0.5)";
+            case 3: newBlock.style.backgroundColor = "rgba(72, 126, 176, 0.2)";
             break;
-            case 4: newBlock.style.backgroundColor = "rgba(245, 246, 250, 0.5)";
+            case 4: newBlock.style.backgroundColor = "rgba(0, 151, 230, 0.2)";
             break;
-            case 5: newBlock.style.backgroundColor = "rgba(245, 246, 250, 0.5)";
+            case 5: newBlock.style.backgroundColor = "rgba(0, 168, 255, 0.2)";
             break;
-            case 6: newBlock.style.backgroundColor = "rgba(245, 246, 250, 0.5)";
+            case 6: newBlock.style.backgroundColor = "rgba(39, 60, 117, 0.2)";
+            break;
+            case 7: newBlock.style.backgroundColor = "rgba(25, 42, 86, 0.2)";
+            break;
+            case 8: newBlock.style.backgroundColor = "rgba(64, 115, 158, 0.2)";
             break;
         }
 
         // Select the direction and orientation
         switch (this.id) {
-            case 0: newBlock.style.left = generateNumber(5, 65).toString() + "%";
+            case 0: newBlock.style.left = generateNumber(2, 65).toString() + "%";
                     newBlock.style.top = (-this.width * 3).toString() + "px";
                     newBlock.style.animation = "fall " + this.speed + "s";
             break;
-            case 1: newBlock.style.top = generateNumber(2, 18).toString() + "%";
-                    newBlock.style.left = (-this.width * 1.5).toString() + "px";
+            case 1: newBlock.style.left = (-this.width * 1.5).toString() + "px";
+                    newBlock.style.top = generateNumber(2, 16).toString() + "%";
                     newBlock.style.animation = "moveRight " + this.speed + "s";
             break;
             case 2: newBlock.style.left = generateNumber(70, 20).toString() + "%";
@@ -109,7 +111,6 @@ class Block {
             case 1: return blockX > body.width();
             case 2: return blockX < 0;
             case 3: return blockX < 0;
-            
         }
     }
 
@@ -118,11 +119,6 @@ class Block {
         $("#block" + this.id.toString()).remove();
     }
 }
-
-// Blocks fade out and delete on click but then are instantly regenerated
-$(".block").click((e) => {
-    e.id;
-});
 
 // Generates a random number between min & min + range
 function generateNumber(min, range) {

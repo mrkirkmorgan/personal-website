@@ -9,7 +9,13 @@
     margin: 0;
     outline: 0;
 	padding: 0;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    
+    /* Default item is not selectable */
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;  
+    -webkit-user-select: none;    
 }
 
 
