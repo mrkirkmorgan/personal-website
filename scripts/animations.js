@@ -40,11 +40,13 @@ $(document).ready(function()
             }).done(() => {
                     $(".dissappear-box").slideToggle();
                     $(".comment-button").fadeTo("fast", 0);
-                    $(".success-msg").fadeTo("slow", 1);
+                    $(".success-msg").fadeIn("slow");
                     setTimeout(() => {
                         $(".comment-button").fadeTo("slow",1);
-                        $(".success-msg").fadeTo("fast", 0);
+                        $(".success-msg").fadeOut("fast");
                     }, 7000);
+                    $("#email-box").val("");
+                    $("#message-box").val("");
             }).fail(() => {
                     alert('This request failed, please try again.')
             });
