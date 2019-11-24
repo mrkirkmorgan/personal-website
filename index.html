@@ -154,12 +154,13 @@ Happy coding!
         </div>
         <div class="email-me">
             <button class="comment-button" type="button">Leave a Comment</button>
-            <button class="email-button" type="button">Email Me</button>
+            <p class="success-msg">Thanks for reaching out! I'll be in touch shortly.</p>
             <div class="dissappear-box">
-                <form class="email-form">
-                        <textarea id="subject-box" placeholder="Subject" rows="1"></textarea>
-                        <textarea id="message-box" maxlength="1000" placeholder="Message"></textarea>
-                        <p>Note: If you use this method, include contact information so I can contact you back.</p>
+                <form id="email-form" method="POST">
+                    <input id="email-box" type="email" name="email" placeholder="Your Email" required>
+                    <input id="subject-box" type="text" name="subject" placeholder="Subject">
+                    <textarea id="message-box" name="message" maxlength="1000" placeholder="Message" required></textarea>
+                    <button id="submit-button"><i class="fas fa-paper-plane"></i></button>
                 </form>
             </div>
         </div>

@@ -233,31 +233,58 @@ footer p {
     display: none;
 }
 
-.email-form {
+.success-msg {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#email-form {
     align-items: center;
     display: flex;
     flex-direction: column;
 }
 
-.email-form textarea {
-    background-color: rgba(223, 230, 233, 0.6);
-    border: 1px solid gray;
+#email-form textarea,input {
+    background-color: rgba(99, 110, 114, 0.5);
+    border: 1px solid rgba(99, 110, 114, 0.5);
+    border-bottom: 3px solid gray;
     box-sizing: border-box;
+    color: whitesmoke;
     display: block;
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    padding: .5rem;
+    padding-bottom: .1rem;
     resize: none;
+    transition: .5s;
     width: 40%;
 }
 
-#subject-box {
+#email-form textarea::placeholder,input::placeholder {
+    color: whitesmoke;
+}
+
+#email-form textarea:focus,input:focus {
+    border: 1px solid whitesmoke;
+    border-bottom: 3px solid whitesmoke;
+    transition: .5s;
+}
+
+#email-box {
     margin-top: 2rem;
+}
+
+#subject-box {
+    display: none;
 }
 
 #message-box {
     box-sizing: content-box;
     height: 15rem;
-    width: 60%;
+    width: 60% !important; 
 }
 
 .additional-links {
