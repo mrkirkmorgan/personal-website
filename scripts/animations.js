@@ -25,4 +25,32 @@ $(document).ready(function()
     $(".comment-button").click(function(e) {
         $(".dissappear-box").slideToggle();
     });
+
+    // Handles the submission of "Leave a Comment" form
+    $("#submit-button").on("click", function(e) {
+        e.preventDefault();
+        var data = {Sender : $("#email-box").val(), Message: $("#message-box").val()};
+
+        if ($("#subject-box").val().length == 0) {
+            $.ajax({
+                url: "//formspree.io/mvooeglp/", 
+                method: "POST",
+                data: data,
+                dataType: "json",
+            }).done(() => {
+                    $(".dissappear-box").slideToggle();
+                    $(".comment-button").fadeTo("fast", 0);
+                    $(".success-msg").fadeIn("slow");
+                    setTimeout(() => {
+                        $(".comment-button").fadeTo("slow",1);
+                        $(".success-msg").fadeOut("fast");
+                    }, 7000);
+                    $("#email-box").val("");
+                    $("#message-box").val("");
+            }).fail(() => {
+                    alert('This request failed, please try again.')
+            });
+            return false;
+        }
+    });
 })
