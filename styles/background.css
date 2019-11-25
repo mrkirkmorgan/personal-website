@@ -6,16 +6,10 @@
     position: absolute;
 }
 
-#wave1 {
+#wave1, #wave2 {
     transform: rotate(216deg);
     right: -10%;
     top: -10%;
-}
-
-#wave2 {
-    transform: rotate(216deg);
-    right: -10.4%;
-    top: -10.4%;
 }
 
 #wave3, #wave4 {
@@ -37,45 +31,16 @@
 
 .block {
     position: absolute;
-    border-radius: 10px;
+    border-radius: 5px;
     z-index: -2;
 }
 
+/* Animation to make blocks fall to the bottom of the screen */
 @keyframes fall {
     100%{transform: translateY(5000px);}
 }
 
-@keyframes moveRight {
-    0%{transform: rotate(90deg);}
-    100%{transform: translateX(5000px) rotate(90deg);}
-}
-
+/* Animation to make blocks rise to the top of the screen */
 @keyframes rise {
-    0%{transform: translateY(100%);}
-    100%{transform: translateY(0%);}
-}
-
-@keyframes moveLeft {
-    0%{transform: translateX(100%);}
-    100%{transform: translateX(0%);}
-}
-
-@keyframes fallRight {
-    0%{transform: translateX(0%) translateY(0%);}
-    100%{transform: translateX(100%) translateY(100%);}
-}
-
-@keyframes fallLeft {
-    0%{transform: rotate(45deg)}
-    100%{transform: translateX(-5000px) translateY(5000px) rotate(45deg);}
-}
-
-@keyframes riseRight {
-    0%{transform: translateX(0%) translateY(100%);}
-    100%{transform: translateX(100%) translateY(0%);}
-}
-
-@keyframes riseLeft {
-    0%{transform: rotate(-45deg);}
-    100%{transform: translateX(-5000px) translateY(-5000px) rotate(-45deg);}
+    100%{transform: translateY(-5000px);}
 }

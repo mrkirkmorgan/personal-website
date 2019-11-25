@@ -1,8 +1,8 @@
 // A JavaScript animation to create and update block animations on the webpage
 
 let blocks = [];
-const totalBlocks = 4; // Only 6 blocks can exist on the screen at one time
-const blockInterval = 3000;
+let blockCounter = 0;
+const blockInterval = 5000;
 
 // Wait until the DOM is loaded before creating Block objects
 document.addEventListener('DOMContentLoaded', initialize, false);
@@ -10,36 +10,40 @@ document.addEventListener('DOMContentLoaded', initialize, false);
 function initialize() {
     setInterval("blocksRun()", blockInterval);
     var i;
-    for (i = 0; i < totalBlocks; i++) {
-        blocks.push(new Block(i));
+    for (i = 0; i < 50; i++) {
+        blocks.push(new Block(i, true));
+        blockCounter++;
     }
 }
 
 // Performs occasional checks on blocks in play and deletes the stale ones/introduces new ones
 function blocksRun() {
-    let deletedBlocks = [];
 
-    // Figure's out which blocks have finished their lifecycle and adds them to a list
+    // Figure's out which blocks have finished their lifecycle and delete them
     blocks.forEach((block) => {
         if (block.checkBlock(block.id)) {
             block.deleteBlock();
             var indexOf = blocks.indexOf(block);
-            var deletedBlock = blocks.splice(indexOf, 1);
-            deletedBlocks.push(deletedBlock[0].id);
+            blocks.splice(indexOf, 1);
         }
     });
 
-    // Takes the specific deleted blocks and re-generates them
-    deletedBlocks.forEach((blockId) => {
-            blocks.push(new Block(blockId));
-    });
+    // creates a random number of blocks each run
+    let numNewBlocks = generateNumber(1, 3);
+    for (let i = 0; i < numNewBlocks; i++) {
+        blocks.push(new Block(blockCounter, false))
+        blockCounter++;
+    }
 }
 
+// A class for a singular block moving across the background
 class Block {
-    constructor(id) {
-        this.width = generateNumber(50, 80); // Block length will be 3x longer than the width
+    constructor(id, initial) {
+        this.width = generateNumber(20, 30); // Block length will be 3x longer than the width
         this.color = generateNumber(1, 6);
         this.speed = generateNumber(250, 20).toString();
+        this.orientation = generateNumber(0, 1);
+        this.initial = initial;
         this.id = id;
         this.createBlock();
     }
@@ -75,22 +79,24 @@ class Block {
         }
 
         // Select the direction and orientation
-        switch (this.id) {
-            case 0: newBlock.style.left = generateNumber(2, 65).toString() + "%";
-                    newBlock.style.top = (-this.width * 3).toString() + "px";
+        switch (this.orientation) {
+            case 0: newBlock.style.left = generateNumber(2, 98).toString() + "%";
                     newBlock.style.animation = "fall " + this.speed + "s";
+
+                    if (this.initial == true) {
+                        newBlock.style.top = generateNumber(0, 96).toString() + "%";
+                    } else {
+                        newBlock.style.top = (-this.width * 3).toString() + "px";
+                    }
             break;
-            case 1: newBlock.style.left = (-this.width * 1.5).toString() + "px";
-                    newBlock.style.top = generateNumber(2, 16).toString() + "%";
-                    newBlock.style.animation = "moveRight " + this.speed + "s";
-            break;
-            case 2: newBlock.style.left = generateNumber(70, 20).toString() + "%";
-                    newBlock.style.top = "-2%";
-                    newBlock.style.animation = "fallLeft " + this.speed + "s";
-            break;
-            case 3: newBlock.style.left = generateNumber(90, 10).toString() + "%";
-                    newBlock.style.top = "30%";
-                    newBlock.style.animation = "riseLeft " + this.speed + "s";
+            case 1: newBlock.style.left = generateNumber(2, 98).toString() + "%";
+                    newBlock.style.animation = "rise " + this.speed + "s";
+
+                    if (this.initial == true) {
+                        newBlock.style.top = generateNumber(0, 96).toString() + "%";
+                    } else {
+                        newBlock.style.bottom = "0%";
+                    }
             break;
         }
         
@@ -106,11 +112,9 @@ class Block {
         let blockY = position.top;
 
         // Checking if the animation is complete depends on orientation
-        switch (this.id) {
+        switch (this.orientation) {
             case 0: return blockY > body.height();
-            case 1: return blockX > body.width();
-            case 2: return blockX < 0;
-            case 3: return blockX < 0;
+            case 1: return blockY < -this.width * 3;
         }
     }
 
