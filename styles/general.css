@@ -5,12 +5,17 @@
     border: 0 none;
     font-family: inherit;
     font-size: 100%;
-    font-style: inherit;
     font-weight: inherit;
     margin: 0;
     outline: 0;
 	padding: 0;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    
+    /* Default item is not selectable */
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;  
+    -webkit-user-select: none;    
 }
 
 
@@ -81,7 +86,6 @@ footer p {
     -webkit-transition: none !important;
 }
 
-
 /*---------- Sitewide Styles ----------*/
 
 .page-section { 
@@ -136,14 +140,23 @@ footer p {
 
 #about {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 75% 25%;
+    grid-template-rows: 30% 58% 12%;
+    height: 115vh;
     padding: 5% 0;
+}
+
+.about-header {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 1;
+    margin-bottom: 2rem;
+    margin-top: 5rem;
+    text-align: center;
 }
 
 .profile-portrait {
     display: flex;
-    grid-column-start: 1;
-    grid-row-start: 1;
+    grid-row: 2;
     justify-content: center;
 }
 
@@ -162,15 +175,15 @@ footer p {
 
 .resume-section-selector {
     grid-column-start: 1;
-    grid-row-start: 2;
+    grid-row: 3;
     position: relative;
 }
 
 .resume-sections {
     display: flex;
     grid-column-start: 2;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
     justify-content: center;
     position: relative;
 }
@@ -179,9 +192,10 @@ footer p {
     height: 35rem;
     opacity: 0;
     position: absolute;
+    text-align: justify;
     transform: translateX(10%);
     transition: 1s;
-    width: 31rem;
+    width: 34rem;
 }
 
 .resume-section.active {
@@ -189,6 +203,18 @@ footer p {
     transform: translateX(0%);
 }
 
+.resume-section header {
+    margin-top: 0;
+    text-align: center;
+}
+
+.resume-section h3 {
+    font-weight: bold;
+}
+
+.work-desc {
+    padding: .5rem 0;
+}
 
 /*--- Contact Section ---*/
 
@@ -301,6 +327,14 @@ footer p {
     margin: 0 1rem;
 }
 
+.resource-link {
+    text-decoration: none;
+}
+
+.resource-link:visited {
+    color: initial;
+}
+
 .contact-halo {
     background-color: #E98074;
     border-radius: 100%;
@@ -324,6 +358,19 @@ footer {
     left: 0;
     position: absolute;
     width: 100%;
+}
+
+
+/*--- Background ---*/
+
+#background {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    width: 100%;
+    top: 0;
+    overflow: hidden;
+    z-index: -1;
 }
 
 

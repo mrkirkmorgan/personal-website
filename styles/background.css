@@ -1,0 +1,46 @@
+/* The css for the background of the website  */
+
+/* Styles for all of the wave animations on the website */
+
+.wave {
+    position: absolute;
+}
+
+#wave1, #wave2 {
+    transform: rotate(216deg);
+    right: -10%;
+    top: -10%;
+}
+
+#wave3, #wave4 {
+    transform: rotate(0deg);
+    top: 23rem;
+}
+
+#wave5, #wave6 {
+    transform: rotate(180deg);
+    top:78rem;
+}
+
+#wave7, #wave8 {
+    bottom: -6.5rem;
+}
+
+
+/* Styles for all of the block animations on the website */
+
+.block {
+    position: absolute;
+    border-radius: 5px;
+    z-index: -2;
+}
+
+/* Animation to make blocks fall to the bottom of the screen */
+@keyframes fall {
+    100%{transform: translateY(5000px);}
+}
+
+/* Animation to make blocks rise to the top of the screen */
+@keyframes rise {
+    100%{transform: translateY(-5000px);}
+}
