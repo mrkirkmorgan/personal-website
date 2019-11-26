@@ -39,10 +39,6 @@ header {
     margin: 2rem;
 }
 
-footer p {
-    padding-left: 5rem;
-}
-
 
 /*---------- Utility Styles ----------*/
 
@@ -272,6 +268,95 @@ footer p {
 }
 
 
+/*--- Projects Area ---*/
+
+#projects {
+    grid-template-columns: auto;
+    grid-template-rows: 8% 56% 28% 10%;
+    height: 175vh; /* ~195% the size of the normal section */
+    padding: 5% 0;
+}
+
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.featured-projects header {
+    margin-bottom: 2rem;
+}
+
+.featured-project {
+    align-self: center;
+    background-color: gray;
+    height: 85%;
+    width: 75%;
+}
+
+.all-projects {
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.project {
+    background-color: lightgray;
+    margin: 1.5%;
+    width: 30%;
+}
+
+/*--- Projects Area ---*/
+
+#projects {
+    grid-template-columns: auto;
+    grid-template-rows: 8% 56% 28% 10%;
+    height: 175vh; /* ~195% the size of the normal section */
+    padding: 5% 0;
+}
+
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.featured-projects header {
+    margin-bottom: 2rem;
+}
+
+.featured-project {
+    align-self: center;
+    background-color: gray;
+    height: 85%;
+    width: 75%;
+}
+
+.all-projects {
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.project {
+    background-color: lightgray;
+    margin: 1.5%;
+    width: 30%;
+}
+
+
 /*--- Contact Section ---*/
 
 #contact {
@@ -415,6 +500,10 @@ footer {
     left: 0;
     position: absolute;
     width: 100%;
+}
+
+footer p {
+    padding-left: 5rem;
 }
 
 
