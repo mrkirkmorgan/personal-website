@@ -216,6 +216,55 @@ footer p {
     padding: .5rem 0;
 }
 
+
+/*--- Projects Section ---*/ 
+
+
+/*--- Projects Area ---*/
+
+#projects {
+    grid-template-columns: auto;
+    grid-template-rows: 8% 54% 30% 10%;
+    height: 185vh; /* ~195% the size of the normal section */
+    padding-bottom: 5%;
+    padding-top: 15%
+}
+
+.project {
+    background-color: lightgray;
+    margin: 1.5%;
+    width: 30%;
+}
+
+.featured-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4rem;
+}
+
+.featured-projects header {
+    margin-bottom: 2rem;
+}
+
+.featured-project {
+    align-self: center;
+    background-color: gray;
+    height: 85%;
+    width: 75%;
+}
+
+.all-projects {
+    display: grid;
+    grid-template-rows: 25% 75%;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .project {
     background-color: lightgray;
     margin: 1.5%;
@@ -227,7 +276,7 @@ footer p {
 
 #contact {
     grid-template-columns: auto;
-    grid-template-rows: 21rem auto 21rem;
+    grid-template-rows: 18rem auto 21rem;
     height: auto;
     text-align: center;
 }
@@ -237,6 +286,7 @@ footer p {
     font-size: 1.25rem;
     max-width: 70%;
     margin: auto;
+    margin-top: 2rem !important;
 }
 
 .email-me {
@@ -378,51 +428,6 @@ footer {
     top: 0;
     overflow: hidden;
     z-index: -1;
-}
-
-
-/*--- Projects Area ---*/
-
-#projects {
-    grid-template-columns: auto;
-    grid-template-rows: 8% 56% 28% 10%;
-    height: 175vh; /* ~195% the size of the normal section */
-    padding: 5% 0;
-}
-
-.featured-projects {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 4rem;
-}
-
-.featured-projects header {
-    margin-bottom: 2rem;
-}
-
-.featured-project {
-    align-self: center;
-    background-color: gray;
-    height: 85%;
-    width: 75%;
-}
-
-.all-projects {
-    display: grid;
-    grid-template-rows: 10% 90%;
-}
-
-.projects {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.project {
-    background-color: lightgray;
-    margin: 1.5%;
-    width: 30%;
 }
 
 
