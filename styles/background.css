@@ -8,8 +8,8 @@
 
 #wave1, #wave2 {
     transform: rotate(216deg);
-    right: -10%;
-    top: -10%;
+    right: -8%;
+    top: -8%;
 }
 
 #wave3, #wave4 {
@@ -23,7 +23,7 @@
 }
 
 #wave7, #wave8 {
-    bottom: -6.5rem;
+    bottom: -8rem;
 }
 
 

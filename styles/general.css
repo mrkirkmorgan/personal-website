@@ -36,7 +36,6 @@ header {
     font-family: 'Righteous', cursive;
     font-size: 3rem;
     font-weight: bold;
-    margin: 2rem;
 }
 
 
@@ -91,6 +90,25 @@ header {
     padding: 10vh 0;
     position: relative;
     width: 100%;
+}
+
+.section-header {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-header:before, .section-header:after {
+    content: '';
+    border-top: 1px solid #E98074;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.section-header:after {
+    margin: 0 0 0 20px;
 }
 
 
@@ -220,10 +238,15 @@ header {
 
 #projects {
     grid-template-columns: auto;
-    grid-template-rows: 8% 54% 30% 10%;
+    grid-template-rows: 10% 52% 30% 10%;
     height: 185vh; /* ~195% the size of the normal section */
     padding-bottom: 5%;
-    padding-top: 15%
+    padding-top: 15%;
+    text-align: center;
+}
+
+#projects header {
+    margin-bottom: 2rem;
 }
 
 .project {
@@ -272,13 +295,13 @@ header {
 
 #contact {
     grid-template-columns: auto;
-    grid-template-rows: 18rem auto 21rem;
+    grid-template-rows: 10rem 10rem auto 21rem;
     height: auto;
     text-align: center;
 }
 
 .contact-pitch {
-    grid-row: 1;
+    grid-row: 2;
     font-size: 1.25rem;
     max-width: 70%;
     margin: auto;
@@ -286,7 +309,7 @@ header {
 }
 
 .email-me {
-    grid-row: 2;
+    grid-row: 3;
 }
 
 .email-me button {
@@ -362,7 +385,7 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column;
-    grid-row: 3;
+    grid-row: 4;
     margin: auto;
     max-width: 70%;
 }
