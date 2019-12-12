@@ -95,7 +95,7 @@ class Block {
                     if (this.initial == true) {
                         newBlock.style.top = generateNumber(0, 96).toString() + "%";
                     } else {
-                        newBlock.style.bottom = "0%";
+                        newBlock.style.bottom = (-this.width * 3).toString() + "px";
                     }
             break;
         }
